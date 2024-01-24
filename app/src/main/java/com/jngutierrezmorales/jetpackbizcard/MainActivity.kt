@@ -1,6 +1,7 @@
 package com.jngutierrezmorales.jetpackbizcard
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
@@ -78,6 +79,7 @@ fun CreateBizCard() {
             Row(modifier = Modifier.align(Alignment.CenterHorizontally)) {
                 Button(
                     onClick = {
+                        Log.d("Clicked", "Button clicked")
                         buttonClickedState.value = !buttonClickedState.value
                     }
                 ) {
