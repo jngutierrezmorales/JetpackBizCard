@@ -64,9 +64,10 @@ fun CreateBizCard() {
     val buttonClickedState = remember {
         mutableStateOf(false)
     }
-    Surface(modifier = Modifier
-        .fillMaxWidth()
-        .fillMaxHeight()) {
+    Surface(
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight()) {
         Card(
             modifier = Modifier
                 .width(200.dp)
@@ -101,14 +102,16 @@ fun CreateBizCard() {
 
 @Composable
 fun Content() {
-    Box(modifier = Modifier
-        .fillMaxHeight()
-        .fillMaxWidth()
-        .padding(5.dp)) {
-        Surface(modifier = Modifier
-            .padding(3.dp)
+    Box(
+        modifier = Modifier
+            .fillMaxHeight()
             .fillMaxWidth()
-            .fillMaxHeight(),
+            .padding(5.dp)) {
+        Surface(
+            modifier = Modifier
+                .padding(3.dp)
+                .fillMaxWidth()
+                .fillMaxHeight(),
             shape = RoundedCornerShape(corner = CornerSize(6.dp)),
             border = BorderStroke(width = 2.dp, color = Color.LightGray)
         ) {
@@ -135,9 +138,10 @@ fun Portfolio(data: List<String>) {
                         .fillMaxWidth()
                 ) {
                     CreateImageProfile(modifier = Modifier.size(100.dp))
-                    Column(modifier = Modifier
-                        .padding(7.dp)
-                        .align(alignment = Alignment.CenterVertically)
+                    Column(
+                        modifier = Modifier
+                            .padding(7.dp)
+                            .align(alignment = Alignment.CenterVertically)
                     ) {
                         Text(text = item, fontWeight = FontWeight.Bold)
                         Text(text = "Test project", style = MaterialTheme.typography.bodyMedium)
